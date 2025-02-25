@@ -1,18 +1,41 @@
-<!DOCTYPE HTML>
-<html>
-   <head>
-      <title>Страница HTML практики</title>
-      <link rel="stylesheet" href="style.css" type="text/css">
-      <meta charset="UTF-8">
-   </head>
-   <body>  
-      <div class="header">
-         <h1>Мой веб-сайт</h1>
-         <p>Время экспериментов!</p>
-         <p><a href="verstka1/verstka1.html">Верстка лендинга</a></p>
-         <p><a href="js/index.html">Хохотушная</a></p>
-         <p><a href="games/elementalius/index.html">Моя первая мини-игра на JS</a></p>
-       </div>
-
-   </body>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ефиркин Максим - Frontend Developer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="particles-js"></div>
+    <div class="container">
+        <!-- Левая часть: Фото и информация -->
+        <section class="sidebar">
+            <img src="MyPhoto 0_-.jpg" alt="Ефиркин Максим" class="profile-image">
+            <h1>Ефиркин Максим</h1>
+            <p class="subtitle">Frontend Developer</p>
+        </section>
+        
+        <!-- Правая часть: Пет-проекты -->
+        <section class="projects">
+            <h2>Мои проекты</h2>
+            <div class="project-list">
+                <div class="project-card">
+                    <h3>Верстка лендинга</h3>
+                    <p>Мой первый pet-проект по верстке.</p>
+                    <a href="verstka1/verstka1.html" class="button" target="_blank">Посмотреть проект</a>
+                </div>
+                <div class="project-card">
+                    <h3>Мини-игра "Elementalius"</h3>
+                    <p>Моя первая мини-игра, написанная на JavaScript.</p>
+                    <a href="games/elementalius/index.html" class="button" target="_blank">Играть</a>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <!-- Подключаем библиотеку particles.js -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
 </html>

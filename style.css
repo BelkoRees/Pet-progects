@@ -1,11 +1,135 @@
-.header {
-    padding: 80px; /* поля */
-    text-align: center; /* текст по центру */
-    background: #1abc9c; /* зеленый фон */
-    color: white; /* белый текст */
+/* Общие стили */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#particles-js {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #7843ff;
+}
+
+.container {
+  position: fixed;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* Левая часть: информация */
+.sidebar {
+  flex: 1;
+  background: #fff;
+  padding: 40px;
+  text-align: center;
+}
+
+.profile-image {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  border: 4px solid #caff43;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* Правая часть: проекты */
+.projects {
+  flex: 2;
+  padding: 40px;
+  background: #f9f9f9;
+}
+
+.projects h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.project-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.project-card {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.project-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.project-card p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.button {
+  display: inline-block;
+  background-color: #caff43;
+  color: #000000;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #ecff5a;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    width: 90%;
   }
-  
-  /* Увеличим размер шрифта у элемента <h1> */
-  .header h1 {
-    font-size: 40px;
+
+  .sidebar, .projects {
+    width: 100%;
+    text-align: center;
   }
+
+  .project-list {
+    align-items: center;
+  }
+
+  .project-card {
+    max-width: 90%;
+  }
+}
